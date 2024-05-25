@@ -1,0 +1,144 @@
+// Переменные
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Общие стили для всех страниц
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+// Стили для навигации
+#navbar {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h2 a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+
+    li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s;
+
+      &:hover, &.active {
+        background: $primary-color;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  #dark-mode-toggle {
+    background: $secondary-color;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($secondary-color, 10%);
+    }
+  }
+}
+
+/* CSS для футера */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed; /* фиксированная позиция */
+  bottom: 0; /* футер будет расположен внизу */
+}
+
+/* Стили для контейнера внутри футера */
+footer .container {
+  max-width: 1200px; /* ширина контейнера */
+  margin: 0 auto; /* центрируем контейнер по горизонтали */
+}
+
+/* Стили для ссылок внутри футера */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px; /* отступы между ссылками */
+}
+
+
+
+/* тёмная тема */
+.dark-mode body {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .container {
+  border-color: #444;
+}
+
+.dark-mode-toggle {
+  background-color: #444;
+  color: #fff;
+}
+

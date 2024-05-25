@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мое Портфолио</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h2><a href="index.html">Мое Портфолио</a></h2>
+          <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="about.html">Обо Мне</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+          <button id="dark-mode-toggle">Переключить тему</button>
+        </div>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Я Ян Карпов</h1>
+          <p>
+            Я начинающий программист, увлеченный изучением новых технологий и
+            языков программирования.
+          </p>
+          <a href="projects.html" class="btn">Посмотреть проекты</a>
+          <a href="../files/resume.pdf" download class="btn">Скачать резюме</a>
+        </div>
+        <div class="hero-video">
+          <video controls>
+            <source src="../videos/intro.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Ян Карпов. Через тернии к звёздам!</p>
+        <p>
+          Следите за мной:
+          <a href="https://github.com/YanKarpov">GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/dark-mode.js"></script>
+    <script src="js/loading.js"></script>
+  </body>
+</html>
