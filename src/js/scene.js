@@ -37,9 +37,16 @@ export function initScene() {
     const stars = generateStars();
     scene.add(stars);
 
-    // Анимация
     function animate() {
         requestAnimationFrame(animate);
+
+        // Вращение звёзд
+        stars.rotation.y += 0.0005; // медленное вращение по оси Y
+
+        // Пульсация звёзд
+        const time = Date.now() * 0.0005;
+        stars.material.size = 1 + Math.sin(time) * 0.3; // пульсирующий размер звёзд
+
         planet.rotation.y += 0.005;
         controls.update();
         renderer.render(scene, camera);
