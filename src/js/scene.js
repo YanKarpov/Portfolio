@@ -11,14 +11,12 @@ export function initScene() {
 
     const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas') });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);  // Добавляем для лучшего разрешения на разных устройствах
+    renderer.setPixelRatio(window.devicePixelRatio);  
     document.body.appendChild(renderer.domElement);
 
-    // Добавляем контролы камеры
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
 
-    // Улучшенное освещение
     const pointLight = new THREE.PointLight(0xffffff, 2, 100);
     pointLight.position.set(10, 10, 10);
     scene.add(pointLight);
@@ -30,7 +28,6 @@ export function initScene() {
     const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
     scene.add(ambientLight);
 
-    // Планета и звёзды
     const planet = createPlanet();
     scene.add(planet);
 
@@ -40,12 +37,10 @@ export function initScene() {
     function animate() {
         requestAnimationFrame(animate);
 
-        // Вращение звёзд
-        stars.rotation.y += 0.0005; // медленное вращение по оси Y
+        stars.rotation.y += 0.0005;
 
-        // Пульсация звёзд
         const time = Date.now() * 0.0005;
-        stars.material.size = 1 + Math.sin(time) * 0.3; // пульсирующий размер звёзд
+        stars.material.size = 1 + Math.sin(time) * 0.3; 
 
         planet.rotation.y += 0.005;
         controls.update();
@@ -54,7 +49,6 @@ export function initScene() {
 
     animate();
 
-    // Обновление размеров окна при изменении
     window.addEventListener('resize', () => {
         const width = window.innerWidth;
         const height = window.innerHeight;
