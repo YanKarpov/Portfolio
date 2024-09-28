@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Убирает прокрутку */
+    height: 100%; /* Задаём высоту на 100% */
+}
+
+#three-canvas {
+    display: block; /* Убираем отступы */
+    width: 100vw; /* Ширина 100% вьюпорта */
+    height: 100vh; /* Высота 100% вьюпорта */
+}
+
+
