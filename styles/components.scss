@@ -1,0 +1,101 @@
+.menu {
+  margin-top: 25px;
+
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    padding: 10px 16px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: #fff;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(164, 59, 239, 0.3);
+    }
+  }
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 16px;
+  padding: 15px;
+
+  backdrop-filter: blur(12px);
+  text-align: center;
+
+  transition: 0.25s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(164, 59, 239, 0.25);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+
+    background: radial-gradient(
+      circle at top,
+      rgba(164, 59, 239, 0.12),
+      transparent 60%
+    );
+
+    opacity: 0;
+    transition: 0.25s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+
+    opacity: 0.95;
+  }
+
+  h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+  }
+
+  p {
+    opacity: 0.75;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+
+  border-radius: 12px;
+  margin-bottom: 10px;
+}

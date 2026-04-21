@@ -1,49 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/common.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-</head>
-<body>
-    <header>
-        <nav id="navbar">
-            <div class="container">
-                <h2><a href="../index.html">Мое Портфолио</a></h2>
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="about.html">Обо Мне</a></li>
-                    <li><a href="projects.html">Проекты</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                </ul>
-                <button id="dark-mode-toggle">Переключить тему</button>
-            </div>
-        </nav>
-    </header>
+    <title>Контакты | Ян Карпов</title>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Контакты</h2>
-            <p>Свяжитесь со мной:</p>
-            <form>
-                
-            </form>
-            <div class="social-links">
-               
-            </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="page">
+      <div class="hub-card">
+        <h1 class="title">Контакты</h1>
+        <p class="subtitle">Свяжись со мной любым удобным способом</p>
+
+        <div class="menu">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=lupushex@gmail.com"
+          >
+            Gmail
+          </a>
+          <a href="https://t.me/LupusHex" target="_blank">Telegram</a>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Ян Карпов. Через тернии к звёздам!</p>
-            <p>Следите за мной: 
-                <a href="https://github.com/YanKarpov">GitHub</a>
-            </p>
+        <div class="social-links" style="margin-top: 25px">
+          <p style="opacity: 0.7; font-size: 0.9rem">
+            Я обычно отвечаю в течение 24 часов
+          </p>
         </div>
-    </footer>
-</body>
+
+        <div class="menu">
+          <a href="../index.html">← Главная</a>
+          <a href="about.html">Обо мне</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/background.js"></script>
+  </body>
 </html>

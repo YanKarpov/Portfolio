@@ -1,45 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/common.css">
-</head>
-<body>
-    <header>
-        <nav id="navbar">
-            <div class="container">
-                <h2><a href="../index.html">Мое Портфолио</a></h2>
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="about.html">Обо Мне</a></li>
-                    <li><a href="projects.html">Проекты</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                </ul>
-                <button id="dark-mode-toggle">Переключить тему</button>
-            </div>
-        </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <section id="about">
-        <div class="container">
-            <h2>Обо мне</h2>
-            <img src="images/profile.jpg" alt="Ян Карпов" class="profile-pic">
-            <p>
+    <title>Обо мне | Ян Карпов</title>
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="page">
+      <div class="hub-card hub-card-wide">
+        <h1 class="title">Обо мне</h1>
+        <p class="subtitle">Немного информации</p>
+
+        <div
+          style="
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+          "
+        >
+          <img
+            src="../images/profile.jpg"
+            alt="Ян Карпов"
+            style="
+              width: 160px;
+              height: 160px;
+              border-radius: 16px;
+              object-fit: cover;
+              border: 1px solid rgba(255, 255, 255, 0.15);
+            "
+          />
+
+          <div style="max-width: 500px; text-align: left">
+            <p style="opacity: 0.85; line-height: 1.6">
+              Я начинающий FullStack разработчик, изучаю веб-технологии, создаю
+              проекты на Python и JavaScript.
             </p>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Ян Карпов. Через тернии к звёздам!</p>
-            <p>Следите за мной: 
-                <a href="https://github.com/YanKarpov">GitHub</a> 
+            <p style="opacity: 0.85; line-height: 1.6">
+              Интересуюсь backend-разработкой, UI/UX и созданием интерактивных
+              интерфейсов.
             </p>
+
+            <p style="opacity: 0.6; font-style: italic">
+              “Через тернии к звёздам 🚀”
+            </p>
+          </div>
         </div>
-    </footer>
-</body>
+
+        <div class="menu">
+          <a href="../index.html">← Главная</a>
+          <a href="projects.html">Проекты</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/background.js"></script>
+  </body>
 </html>
